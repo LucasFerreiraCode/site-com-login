@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #2b43af;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .header .menu {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .header .menu button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .saldo, .ganhos {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 40%;
+            text-align: center;
+        }
+        .produtos-section {
+            padding: 20px;
+        }
+        .produtos-section h2 {
+            text-align: center;
+        }
+        .produto-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .produto-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .produto-card h3 {
+            margin: 0;
+        }
+        .produto-card p {
+            margin: 10px 0;
+        }
+        .produto-card button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bem-vindo à sua conta</h1>
+        <div class="menu">
+            <button>Depositar</button>
+            <button>Saque</button>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="saldo">
+            <h3>Saldo da Conta</h3>
+            <p>R$ 500,00</p>
+        </div>
+        <div class="ganhos">
+            <h3>Ganhos Totais</h3>
+            <p>R$ 1.200,00</p>
+        </div>
+    </div>
+    <div class="produtos-section">
+        <h2>Pacotes de investimentos</h2>
+        <div class="produto-list">
+            <div class="produto-card">
+                <h3>Produto 1</h3>
+                <p>R$ 55,00</p>
+                <p>Período: 30 dias</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto-card">
+                <h3>Produto 2</h3>
+                <p>R$ 120,00</p>
+                <p>Período: 30 dias</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto-card">
+                <h3>Produto 3</h3>
+                <p>R$ 85,00</p>
+                <p>Período: 30 dias</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto-card">
+                <h3>Produto 4</h3>
+                <p>R$ 45,00</p>
+                <p>Período: 30 dias</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
