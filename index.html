@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vision Invest</title>
+    <link rel="icon" href="./img/Captura de tela 2025-02-05 123221.png">
+    <link rel="stylesheet" href="./login.css">
+    <style>
+        /* Seu estilo aqui */
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Vision Invest - Login</h1>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Entrar na sua conta</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <input type="text" id="usuario" placeholder="Usuário" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Aqui você pode adicionar lógica para validar o login
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            // Exemplo simples de validação (pode ser substituído por algo mais robusto)
+            if (usuario === "teste" && senha === "12345") {
+                // Redireciona para a página de produtos
+                window.location.href = 'teste.html';
+            } else {
+                alert("Usuário ou senha incorretos!");
+            }
+        }
+    </script>
+</body>
+
+</html>

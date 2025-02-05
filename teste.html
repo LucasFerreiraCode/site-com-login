@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Vision Invest</title>
+    <link rel="icon" href="./img/Captura de tela 2025-02-05 123221.png">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #f2f2f2;
         }
+
         .header {
             background-color: #2b43af;
             color: white;
@@ -17,27 +20,32 @@
             text-align: center;
             position: relative;
         }
+
         .header .menu {
             position: absolute;
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
         }
+
         .header .menu button {
             padding: 10px 15px;
-            background-color: #4CAF50;
+            background-color: #4286d4;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-left: 10px;
         }
+
         .main-container {
             display: flex;
             justify-content: space-around;
             padding: 20px;
         }
-        .saldo, .ganhos {
+
+        .saldo,
+        .ganhos {
             background-color: white;
             padding: 20px;
             border-radius: 5px;
@@ -45,17 +53,24 @@
             width: 40%;
             text-align: center;
         }
+
         .produtos-section {
             padding: 20px;
+            flex-direction: row;
+            justify-content: center;
         }
+
         .produtos-section h2 {
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
+
         .produto-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
+
         .produto-card {
             background-color: white;
             padding: 20px;
@@ -63,68 +78,145 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        .produto-card h3 {
-            margin: 0;
+
+        .produto-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .produto-card p {
-            margin: 10px 0;
+
+        /* Estilos para o Modal */
+        .modal {
+            display: flex;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
         }
-        .produto-card button {
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>Bem-vindo à sua conta</h1>
         <div class="menu">
+            <button onclick="window.location.href='login.html';">Login</button>
             <button>Depositar</button>
             <button>Saque</button>
         </div>
     </div>
+
     <div class="main-container">
         <div class="saldo">
             <h3>Saldo da Conta</h3>
-            <p>R$ 500,00</p>
+            <p>R$ 25,00</p>
         </div>
         <div class="ganhos">
             <h3>Ganhos Totais</h3>
-            <p>R$ 1.200,00</p>
+            <p>R$ 0</p>
         </div>
     </div>
+
     <div class="produtos-section">
         <h2>Pacotes de investimentos</h2>
         <div class="produto-list">
             <div class="produto-card">
-                <h3>Produto 1</h3>
-                <p>R$ 55,00</p>
-                <p>Período: 30 dias</p>
-                <button>Comprar</button>
+                <img src="./img/IMG-TV -01.webp">
+                <h3>Televisores QLED 4K da Samsung</h3>
+                <p>Investimento: R$55.00</p>
+                <p>Retorno Diário: R$12.00</p>
+                <p>Retorno Total: R$360.00</p>
+                <p>Período: 30 Dias</p>
+                <button>Investir Agora</button>
             </div>
             <div class="produto-card">
-                <h3>Produto 2</h3>
-                <p>R$ 120,00</p>
-                <p>Período: 30 dias</p>
-                <button>Comprar</button>
+                <img src="./img/IMG.TV-02.webp">
+                <h3>Televisor Curvo 4K UHD 138cm 55" Smart TV Serie NU8505r</h3>
+                <p>Investimento: R$140.00</p>
+                <p>Retorno Diário: R$37.00</p>
+                <p>Retorno Total: R$1,110.00</p>
+                <p>Período: 30 Dias</p>
+                <button>Investir Agora</button>
             </div>
             <div class="produto-card">
-                <h3>Produto 3</h3>
-                <p>R$ 85,00</p>
-                <p>Período: 30 dias</p>
-                <button>Comprar</button>
+                <img src="./img/IMG-TV 03.jpg">
+                <h3>Televisor Curvo 65 polegadas 4K com Smart TV - UE65HU8200L</h3>
+                <p>Investimento: R$160</p>
+                <p>Retorno Diário: R$75,33</p>
+                <p>Retorno Total: R$2.260,00</p>
+                <p>Período: 30 Dias</p>
+                <button>Investir Agora</button>
             </div>
             <div class="produto-card">
-                <h3>Produto 4</h3>
-                <p>R$ 45,00</p>
-                <p>Período: 30 dias</p>
-                <button>Comprar</button>
+                <img src="./img/IMG-TV 04.jpg">
+                <h3>Televisores modernos 3D curvos 4K UltraHD</h3>
+                <p>Investimento: R$180.00</p>
+                <p>Retorno Diário: R$238.00</p>
+                <p>Retorno Total: R$7,140.00</p>
+                <p>Período: 30 Dias</p>
+                <button>Investir Agora</button>
+            </div>
+            <div class="produto-card">
+                <img src="./img/IMG-TV 05.avif">
+                <h3>Televisor Philips 4k Ultra HD Smart TV 75" 75PUD7906</h3>
+                <p>Investimento: R$200.00</p>
+                <p>Retorno Diário: R$400.00</p>
+                <p>Retorno Total: R$12,000.00</p>
+                <p>Período: 30 Dias</p>
+                <button>Investir Agora</button>
+            </div>
+            <div class="produto-card">
+                <img src="./img/IMG-TV 06.jpg">
+                <h3>Televisores OLED 4K e FHD da LG</h3>
+                <p>Investimento: R$220.00</p>
+                <p>Retorno Diário: R$900.00</p>
+                <p>Retorno Total: R$27,000.00</p>
+                <p>Período: 30 Dias</p>
+                <button>Investir Agora</button>
             </div>
         </div>
     </div>
+
+    <!--Alerta -->
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <h2>🔔 Aviso Importante</h2>
+            <p><strong>📌 Bônus Inicial:</strong> Ao criar sua conta, você recebe um bônus de <strong>$25</strong> para começar a investir.</p>
+            <p><strong>👥 Indique e Ganhe:</strong> Convide amigos e ganhe <strong>$15</strong> por cada indicação bem-sucedida.</p>
+            <p><strong>💰 Saques Disponíveis:</strong> Os saques estarão liberados <strong>após 24 horas</strong> da criação da conta.</p>
+            <p><strong>📈 Rendimentos Garantidos:</strong> Seus investimentos começarão a render dentro de <strong>24 horas</strong> após a aplicação.</p>
+            <p><strong>⚠️ Atenção:</strong> Certifique-se de ler os termos e condições antes de realizar qualquer operação.</p>
+            <button onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Script para exibir e fechar o Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("alertModal").style.display = "flex";
+        });
+
+        function fecharModal() {
+            document.getElementById("alertModal").style.display = "none";
+        }
+    </script>
 </body>
+
 </html>
