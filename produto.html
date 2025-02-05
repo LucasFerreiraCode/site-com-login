@@ -216,6 +216,41 @@
         function fecharModal() {
             document.getElementById("alertModal").style.display = "none";
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        let botoesInvestir = document.querySelectorAll(".produto-card button");
+
+        botoesInvestir.forEach((botao, index) => {
+            botao.addEventListener("click", function () {
+                window.location.href = `comprar.html?produto=${index + 1}`;
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let botoesInvestir = document.querySelectorAll(".produto-card button");
+
+        botoesInvestir.forEach((botao, index) => {
+            botao.addEventListener("click", function () {
+                window.location.href = `comprar.html?produto=${index + 1}`;
+            });
+        });
+
+        // Função para digitalizar saldo
+        document.getElementById("scanSaldo").addEventListener("click", function () {
+            alert("Digitalização de saldo em andamento...");
+            // Aqui poderia ser integrado com um serviço de digitalização
+        });
+
+        // Função para pagamento via Pix
+        document.getElementById("pagarPix").addEventListener("click", function () {
+            let valor = prompt("Digite o valor a ser pago via Pix:");
+            if (valor) {
+                alert(`Gerando QR Code para pagamento de R$ ${valor} via Pix...`);
+                // Aqui poderia ser gerado um QR Code dinâmico para pagamento
+            }
+        });
+    });
     </script>
 </body>
 
