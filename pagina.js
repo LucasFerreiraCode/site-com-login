@@ -18,9 +18,9 @@ if (!usuarioAutenticado) {
 
 if (usuario === "admin" && senha === "12345") {
     localStorage.setItem("logado", "true");
-    window.location.href = 'teste.html';
+    window.location.href = 'produto.html';
 }
 
 if (localStorage.getItem("logado") !== "true") {
-    window.location.href = 'login.html';  // Redireciona de volta para o login
+    window.location.href = 'index.html';  // Redireciona de volta para o login
 }
